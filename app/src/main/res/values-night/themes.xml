@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Theme.SOSApp" parent="Theme.SOSApp.BaseTheme">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorDark</item>
+        <item name="colorPrimaryVariant">@color/colorDarkX</item>
+        <item name="colorOnPrimary">@color/colorDark</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorDark</item>
+        <item name="colorSecondaryVariant">@color/colorDarkX</item>
+        <item name="colorOnSecondary">@color/colorDark</item>
+
+        <!-- Customize your theme here. -->
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/colorLight</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/colorDark</item>
+
+        <item name="android:windowBackground">@color/colorDark</item>
+
+        <!-- Color Attrs -->
+        <item name="colorThemeBackground">@color/colorDark</item>
+        <item name="colorTextDark">@color/colorWhite</item>
+        <item name="colorTextMain">@color/colorTextDark</item>
+        <item name="colorTextPrimary">@color/colorBlack</item>
+        <item name="colorIconNormal">@color/colorTextDark</item>
+        <item name="colorIconActive">@color/colorBlack</item>
+        <item name="colorButtonTint">@color/colorDark</item>
+
+    </style>
+</resources>

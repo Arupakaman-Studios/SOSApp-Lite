@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_sos_contacts"
+    app:startDestination="@id/navFragSOSContacts">
+
+    <fragment
+        android:id="@+id/navFragSOSContacts"
+        android:name="app.sosapp.sos.sosapp.uiModules.sosContacts.FragmentSOSContacts"
+        android:label="@string/title_sos_contacts"
+        tools:layout="@layout/fragment_sos_contacts">
+
+        <action
+            android:id="@+id/action_sos_contacts_to_contacts_picker"
+            app:destination="@id/fragNavContactsPicker"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragNavContactsPicker"
+        android:name="app.sosapp.sos.sosapp.uiModules.contactsPicker.FragmentContactsPicker"
+        android:label="@string/title_select_sos_contacts"
+        tools:layout="@layout/fragment_contacts_picker">
+
+        <argument
+            android:name="maxSelection"
+            android:defaultValue="10"
+            app:argType="integer" />
+
+        <argument
+            android:name="sosContacts"
+            android:defaultValue="true"
+            app:argType="boolean" />
+
+    </fragment>
+
+</navigation>

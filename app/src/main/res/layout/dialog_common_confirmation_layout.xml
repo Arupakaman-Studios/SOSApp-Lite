@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.text.TextUtils"/>
+        <variable
+            name="bTitle"
+            type="String" />
+        <variable
+            name="bMsg"
+            type="String" />
+        <variable
+            name="bLeftBtnTxt"
+            type="String" />
+        <variable
+            name="bRightBtnTxt"
+            type="String" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dialogPopupCornerRadius"
+        android:minWidth="280dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorPrimary"
+            android:minWidth="280dp"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@{bTitle}"
+                tools:text="@string/app_name"
+                style="@style/Theme.SOSApp.TitleTextAppearance"
+                android:textColor="?colorTextMain"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_h2"
+                android:id="@+id/tvDialogTitle"
+                android:background="?colorPrimaryVariant"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvDialogTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingHorizontal="10dp"
+                android:padding="30dp"
+                android:text="@{bMsg}"
+                tools:text="@string/app_name"
+                style="@style/Theme.SOSApp.TitleTextAppearance"
+                android:textColor="?colorTextMain"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_h3"
+                android:id="@+id/tvDialogMsg"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonHeightSmall"
+                android:id="@+id/btnLeft"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnRight"
+                app:layout_constraintTop_toBottomOf="@id/tvDialogMsg"
+                tools:text="@string/action_cancel"
+                android:text="@{bLeftBtnTxt}"
+                bind_isVisible="@{!TextUtils.isEmpty(bLeftBtnTxt)}"
+                android:textColor="?colorTextMain"
+                android:textSize="@dimen/buttonTextSizeSmall"
+                android:insetTop="@dimen/dp_zero"
+                android:insetBottom="@dimen/dp_zero"
+                app:cornerRadius="@dimen/dp_zero"
+                android:textAllCaps="false"
+                tools:visibility="visible"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="@dimen/buttonHeightSmall"
+                android:id="@+id/btnRight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnLeft"
+                app:layout_constraintTop_toBottomOf="@id/tvDialogMsg"
+                tools:text="@string/app_name"
+                android:text="@{bRightBtnTxt}"
+                bind_isVisible="@{!TextUtils.isEmpty(bRightBtnTxt)}"
+                android:insetTop="@dimen/dp_zero"
+                android:insetBottom="@dimen/dp_zero"
+                app:cornerRadius="@dimen/dp_zero"
+                app:backgroundTint="?colorPrimaryVariant"
+                android:textColor="?colorTextMain"
+                android:textSize="@dimen/buttonTextSizeSmall"
+                android:textAllCaps="false"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

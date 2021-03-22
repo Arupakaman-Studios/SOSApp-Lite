@@ -1,0 +1,198 @@
+<resources>
+
+    <!-- For Release Notes Translation : https://androidreleasenotes.com/ -->
+
+    <string name="app_name" translatable="false">SOSApp</string>
+
+    <!-- Non-Translatable -->
+
+    <string name="str_empty" translatable="false" />
+
+    <string name="notification_channel_name" translatable="false">SOSApp_Notification_Channel</string>
+
+    <string name="email_publisher" translatable="false">arupakamanstudios@gmail.com</string>
+    <string name="url_sosapp_dot_in" translatable="false">https://sosapp.in</string>
+
+    <string name="name_hope" translatable="false">소원</string>
+
+    <string name="english" translatable="false">English</string>
+    <string name="japanese" translatable="false">日本語</string>
+    <string name="korean" translatable="false">한국어</string>
+    <string name="hindi" translatable="false">हिन्दी</string>
+    <string name="russian" translatable="false">Русский</string>
+    <string name="spanish" translatable="false">Espagnol</string>
+    <string name="french" translatable="false">Français</string>
+    <string name="chinese" translatable="false">中国</string>
+    <string name="polish" translatable="false">Polskie</string>
+
+    <string name="english_code" translatable="false">en</string>
+    <string name="japanese_code" translatable="false">ja</string>
+    <string name="korean_code" translatable="false">ko</string>
+    <string name="hindi_code" translatable="false">hi</string>
+    <string name="russian_code" translatable="false">ru</string>
+    <string name="spanish_code" translatable="false">es</string>
+    <string name="french_code" translatable="false">fr</string>
+    <string name="chinese_code" translatable="false">zh</string>
+    <string name="polish_code" translatable="false">pl</string>
+
+
+    <string name="countdown_0">None</string>
+    <string name="countdown_3">3 Seconds</string>
+    <string name="countdown_5">5 Seconds</string>
+    <string name="countdown_10">10 Seconds</string>
+
+
+    <!-- Titles -->
+
+    <string name="title_sos">SOS</string>
+    <string name="title_home">Home</string>
+    <string name="title_sos_contacts">SOS Contacts</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_more_apps">More Apps</string>
+    <string name="title_emergency_numbers">Emergency Numbers</string>
+    <string name="title_police">Police</string>
+    <string name="title_ambulance">Ambulance</string>
+    <string name="title_fire_department">Fire Department</string>
+    <string name="title_emergency_number">Emergency Number</string>
+    <string name="title_sos_msg">SOS Message</string>
+    <string name="title_sos_tools">SOS Tools</string>
+    <string name="title_select_sos_contacts">Select SOS Contacts</string>
+    <string name="title_permission_required">Permission Required!</string>
+    <string name="title_sos_msg_edit_preview">Edit and preview your SOS message here</string>
+    <string name="title_edit_sos_message">Edit SOS Message</string>
+    <string name="title_sos_flash">SOS Flash</string>
+    <string name="title_sos_siren">SOS Siren</string>
+    <string name="title_edit_emg_numbers">Edit Emergency Numbers</string>
+    <string name="title_get_sos_num_by_country">Fetch emergency numbers by country :</string>
+    <string name="title_share">Share</string>
+    <string name="title_rate">Rate</string>
+    <string name="title_visit_website">Visit Website</string>
+    <string name="title_personalization">Personalization</string>
+    <string name="title_theme">Theme</string>
+    <string name="title_system">System</string>
+    <string name="title_light">Light</string>
+    <string name="title_dark">Dark</string>
+    <string name="title_change_language">Change language</string>
+    <string name="title_select_language_colon">Select language : </string>
+    <string name="title_send_via">Send Via :</string>
+    <string name="title_share_via">Share Via :</string>
+    <string name="title_send_sos">Send SOS</string>
+    <string name="title_remove_sos_contact">Remove SOS Contact!</string>
+    <string name="title_select_trusted_contact">Select Trusted Contact</string>
+    <string name="title_sos_send_countdown_time">SOS Send Countdown</string>
+    <string name="title_call_permission">Direct Call Permission</string>
+    <string name="title_select_countdown_time_colon">Select countdown time : </string>
+    <string name="title_about_us">About Us</string>
+    <string name="title_error">Error!</string>
+    <string name="title_location_service_required">Location service / GPS required!</string>
+    <string name="title_update_available">Update Available!</string>
+    <string name="title_support_us">Support Us</string>
+    <string name="title_contact_us">Contact Us</string>
+    <string name="title_about_dev">About the Developer</string>
+    <string name="title_help_translate">Help Translate SOSApp</string>
+    <string name="title_sos_address">Address in SOS Message</string>
+    <string name="title_sos_silent">Silent When Sending SOS</string>
+
+
+    <!-- Actions -->
+
+    <string name="action_edit">Edit</string>
+    <string name="action_add_sos_contacts">Add SOS Contacts</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_select">Select</string>
+    <string name="action_grant_now">Grant Now</string>
+    <string name="action_save">Save</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_send_now">Send Now</string>
+    <string name="action_update_now">Update Now</string>
+    <string name="action_later">Later</string>
+    <string name="action_enable">Enable</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_call_police">Call Police</string>
+
+
+    <!-- Description -->
+    <string name="desc_current_language_colon">Current language : </string>
+    <string name="desc_current_countdown_time_colon">Current countdown time :</string>
+    <string name="desc_call_permission">Grant call permission to SOSApp, to make direct calls.</string>
+    <string name="desc_about_us">About SOSApp and the developer.</string>
+    <string name="desc_call_permission_granted">Call permission is already granted to SOSApp.</string>
+    <string name="desc_sos_address">Attach address with SOS message. Accuracy will depend on your device\'s location.</string>
+    <string name="desc_sos_silent">Silent ringer mode when sending an SOS.</string>
+
+
+    <!-- Messages -->
+
+    <string name="msg_default_sos_msg">Help Me!! \nIt\'s an Emergency!! \nI am at the bellow location: \n</string>
+    <string name="msg_please_wait">Please wait…</string>
+    <string name="msg_loading_contacts">Loading Contacts…</string>
+    <string name="msg_read_contact_permission_required_rational">Permission is required to read contacts from your device. You have to grant this permission from device settings.</string>
+    <string name="msg_read_contact_permission_required">Permission is required to read contacts from your device.</string>
+    <string name="msg_sos_msg_saved">SOS message saved</string>
+    <string name="msg_sos_contact_removed">SOS Contact Removed</string>
+    <string name="msg_remove_sos_contact">This contact will be removed from SOS contacts : \n\n</string>
+    <string name="msg_send_sos_individual">Send SOS to the selected contact : \n\n</string>
+    <string name="msg_contact_select_limit">Maximum contacts selected!</string>
+    <string name="msg_fetching_emg_num">Fetching Emergency Numbers…</string>
+    <string name="msg_tap_to_turn_off_sos_siren">Tap to turn off SOS siren.</string>
+    <string name="msg_playing_siren">Playing SOS siren.</string>
+    <string name="msg_tap_to_turn_off_sos_flash">Tap to turn off SOS Flash.</string>
+    <string name="msg_sos_flash_is_on">SOS flash is on.</string>
+    <string name="msg_more_apps_arupakaman">Please download, share and rate, other apps by Arupakaman Studios, to support the development of these free apps.</string>
+    <string name="msg_share_sosapp">Hey, \nCheckout this app that lets you send SOS emergency alerts, with your current location, to get help. Get it from : \n</string>
+    <string name="msg_enter_your_message">Enter your message here…</string>
+    <string name="msg_sos_msg_my_last_loc">My last location was : \n\n</string>
+    <string name="msg_sending_sos_in">Sending SOS in</string>
+    <string name="msg_loading_apps">Loading Apps…</string>
+    <string name="msg_warning_sos_back_press_close">*Note: Carrier SMS Charges May Apply.\nDo not press back button or close the if you don\'t want to cancel sending SOS.</string>
+    <string name="msg_sos_sent_to">SOS sent to :</string>
+    <string name="msg_warning_msg_sent">SOSApp sends SMS message with your location to your SOS contacts. Success or failure depends on your carrier provider. Location accuracy depends on your device.</string>
+    <string name="msg_getting_location">Getting Location…</string>
+    <string name="msg_location_permission_required_rational">Location permission is required to send your location with SOS message. You have to grant this permission from device settings.</string>
+    <string name="msg_location_permission_required">Location permission is required to send your location with SOS message.</string>
+    <string name="msg_location_service_enabled_required">Location service (GPS) must be enabled in order to get your location. Enable it manually and retry.</string>
+    <string name="msg_sms_permission_required_rational">Permission to send SMS is required by SOSApp in order to send SOS alert to your SOS contacts. You have to grant this permission from device settings.</string>
+    <string name="msg_sms_permission_required">Permission to send SMS is required by SOSApp in order to send SOS alert to your SOS contacts.</string>
+    <string name="msg_retry_sending_sos">Retry sending SOS?</string>
+    <string name="msg_location_sms_permissions_required">Following permissions are required by SOSApp to work properly : \n\nLocation Permission - To share your location while sending an emergency SOS message.\n\nSend SMS Permission - To send SOS message via SMS.</string>
+    <string name="msg_update_available">There is a new update available for SOSApp.</string>
+    <string name="msg_sos_contacts_info">You can select up to 10 SOS contacts.\nTap on any contact to send them a SOS message.</string>
+    <string name="msg_app_dedicated">This app is dedicated to Hope.</string>
+    <string name="msg_about_sosapp">With SOSApp you can send SOS alerts with your location, to your selected contacts. You can edit your SOS message.</string>
+    <string name="msg_about_us">SOSApp is developed by <a href="https://www.linkedin.com/in/nareshnathnnk/">Naresh Nath</a> of Arupakaman Studios. Arupakaman Studios is a group of independent developers working on various applications and services. \nYou can send us your feedback and app suggestions via email.</string>
+    <string name="msg_contact_us">If you want to send feedback, report error or suggest any features for SOSApp, feel free to contact us.\nYou can also share any ideas for apps that you would like to see get developed.</string>
+    <string name="msg_send_sos_to_sos_contacts">Send SOS message to all SOS contacts?</string>
+    <string name="msg_support_us">If you liked SOSApp, support us by sharing it with your friends &amp; family and writing a review. Download our other apps to support us.</string>
+
+
+    <!-- Error Messages -->
+
+    <string name="err_msg_no_emergency_numbers">No emergency numbers found!</string>
+    <string name="err_msg_general">Something went wrong!</string>
+    <string name="err_msg_no_contacts_app">Contacts App not found!</string>
+    <string name="err_msg_no_contacts">No Contacts Found!</string>
+    <string name="err_msg_no_sos_contacts">No SOS contacts found!</string>
+    <string name="err_msg_empty_sos_msg">Enter valid SOS message!</string>
+    <string name="err_msg_enter_emergency_numbers">Enter Emergency Numbers!</string>
+    <string name="err_msg_location_fetch_failed">Location fetch failed!</string>
+
+
+    <!-- Hints -->
+    <string name="hint_your_sos_msg">Your SOS Message</string>
+    <string name="hint_edit_sos_msg">Edit SOS Message</string>
+    <string name="hint_police_number">Police Number</string>
+    <string name="hint_ambulance_number">Ambulance Number</string>
+    <string name="hint_fire_dep_number">Fire Dept. Number</string>
+    <string name="hint_trusted_contact_number">Trusted Contact Number</string>
+
+
+    <!-- Content Description -->
+
+    <string name="cont_desc_delete_contact_button">Delete contact button</string>
+    <string name="cont_desc_select_contact">Click to select from contacts.</string>
+    <string name="cont_desc_select_deselect_contact">Tap to select or deselect contact</string>
+    <string name="cont_desc_app_logo">SOSApp logo</string>
+
+
+
+</resources>

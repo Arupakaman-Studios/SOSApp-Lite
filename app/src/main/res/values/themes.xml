@@ -1,0 +1,83 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+
+    <style name="Theme.SOSApp.BaseTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?colorPrimary</item>
+        <item name="android:navigationBarColor">?colorPrimary</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:fontFamily">@font/font</item>
+        <item name="fontFamily">@font/font</item>
+
+        <item name="toolbarStyle">@style/Theme.SOSApp.Toolbar</item>
+        <item name="actionBarTheme">@style/Theme.SOSApp.AppBarLayout</item>
+        <item name="actionOverflowButtonStyle">@style/Theme.SOSApp.ActionOverflowButtonStyle</item>
+        <item name="actionOverflowMenuStyle">@style/Theme.SOSApp.ActionOverflowStyle</item>
+
+        <item name="materialAlertDialogTheme">@style/Theme.SOSApp.AlertDialogMaterialTheme</item>
+    </style>
+
+    <style name="Theme.SOSApp" parent="Theme.SOSApp.BaseTheme">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorLight</item>
+        <item name="colorPrimaryVariant">@color/colorLightX</item>
+        <item name="colorOnPrimary">@color/colorLight</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorLight</item>
+        <item name="colorSecondaryVariant">@color/colorLightX</item>
+        <item name="colorOnSecondary">@color/colorLight</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- Customize your theme here. -->
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/colorDark</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/colorLight</item>
+
+        <item name="android:windowBackground">@color/colorLight</item>
+
+        <!-- Color Attrs -->
+        <item name="colorThemeBackground">@color/colorLight</item>
+        <item name="colorTextDark">@color/colorTextDark</item>
+        <item name="colorTextMain">@color/colorTextLight</item>
+        <item name="colorTextPrimary">@color/colorWhite</item>
+        <item name="colorIconNormal">@color/colorTextLight</item>
+        <item name="colorIconActive">@color/colorWhite</item>
+        <item name="colorButtonTint">@color/colorLight</item>
+
+    </style>
+
+
+    <style name="Theme.SOSApp.Red" parent="Theme.SOSApp.BaseTheme">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorRedTheme</item>
+        <item name="colorPrimaryVariant">@color/colorRedThemeX</item>
+        <item name="colorOnPrimary">@color/colorRedTheme</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorRedTheme</item>
+        <item name="colorSecondaryVariant">@color/colorRedThemeX</item>
+        <item name="colorOnSecondary">@color/colorRedTheme</item>
+
+        <!-- Customize your theme here. -->
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/colorRedTheme</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/colorLight</item>
+
+        <item name="android:windowBackground">@color/colorRedTheme</item>
+
+        <!-- Color Attrs -->
+        <item name="colorThemeBackground">@color/colorRedTheme</item>
+        <item name="colorTextDark">@color/colorRedText</item>
+        <item name="colorTextMain">@color/colorLightX</item>
+        <item name="colorTextPrimary">@color/colorRedTheme</item>
+        <item name="colorIconNormal">@color/colorLight</item>
+        <item name="colorIconActive">@color/colorLightX</item>
+        <item name="colorButtonTint">@color/colorLight</item>
+
+    </style>
+
+</resources>

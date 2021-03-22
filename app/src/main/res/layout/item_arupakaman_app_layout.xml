@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="app.sosapp.sos.sosapp.R"/>
+
+        <variable
+            name="bModel"
+            type="app.sosapp.sos.sosapp.models.ModelArupakamanApp" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="@dimen/itemHeightHomeOptions"
+        android:layout_width="match_parent"
+        android:id="@+id/itemRootView"
+        android:layout_columnWeight="1"
+        android:layout_margin="5dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="5dp"
+        style="@style/Theme.SOSApp.ClickableWithinBorder"
+        app:cardBackgroundColor="?colorPrimaryVariant"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/ivEmgNum"
+                tools:srcCompat="@drawable/ic_play_store"
+                bind_glideUrl="@{bModel.iconUrl}"
+                bind_glidePlaceholder="@{R.drawable.ic_play_store}"
+                bind_glideError="@{R.drawable.ic_play_store}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:contentDescription="@{bModel.name}"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvEmgName"
+                tools:text="@string/app_name"
+                android:gravity="center"
+                android:text="@{bModel.name ?? ``}"
+                app:layout_constraintTop_toBottomOf="@id/ivEmgNum"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="?colorTextMain"
+                android:textSize="@dimen/text_size_h3"
+                android:maxLines="2"
+                android:ellipsize="end"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

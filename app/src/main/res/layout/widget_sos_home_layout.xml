@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#90ffffff"
+    >
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/llSOSView"
+        android:elevation="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_centerVertical="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/title_sos"
+            android:textStyle="bold"
+            android:background="@drawable/bg_sos_circle_gradient"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/llSOSView"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_horizontal"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/btnFlash"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_flash"
+                android:contentDescription="@string/title_sos_flash"
+                app:tint="@color/colorPrimary" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/btnSiren"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_sirens"
+                app:tint="@color/colorPrimary"
+                android:contentDescription="@string/title_sos_siren"
+                 />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

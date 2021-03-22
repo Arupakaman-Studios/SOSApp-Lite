@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/navFragHome">
+
+    <fragment
+        android:id="@+id/navFragHome"
+        android:name="app.sosapp.sos.sosapp.uiModules.home.FragmentHome"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_edit_sos_msg"
+            app:destination="@id/fragNavEditSOSMsg"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/action_home_to_edit_sos_num"
+            app:destination="@id/fragNavEditSOSNum"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragNavEditSOSMsg"
+        android:name="app.sosapp.sos.sosapp.uiModules.editSOSMsg.FragmentEditSOSMessage"
+        android:label="@string/title_edit_sos_message"
+        tools:layout="@layout/fragment_edit_sos_message"/>
+
+    <fragment
+        android:id="@+id/fragNavEditSOSNum"
+        android:name="app.sosapp.sos.sosapp.uiModules.editSOSNum.FragmentEditSOSNumbers"
+        android:label="@string/title_edit_emg_numbers"
+        tools:layout="@layout/fragment_edit_sos_numbers">
+        <action
+            android:id="@+id/action_edit_sos_num_to_pick_contact"
+            app:destination="@id/fragNavContactsPicker"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragNavContactsPicker"
+        android:name="app.sosapp.sos.sosapp.uiModules.contactsPicker.FragmentContactsPicker"
+        android:label="@string/title_select_trusted_contact"
+        tools:layout="@layout/fragment_contacts_picker">
+
+        <argument
+            android:name="maxSelection"
+            android:defaultValue="1"
+            app:argType="integer" />
+
+        <argument
+            android:name="sosContacts"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+    </fragment>
+
+</navigation>

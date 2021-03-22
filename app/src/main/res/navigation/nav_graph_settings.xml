@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_settings"
+    app:startDestination="@id/navFragSettings">
+
+    <fragment
+        android:id="@+id/navFragSettings"
+        android:name="app.sosapp.sos.sosapp.uiModules.settings.FragmentSettings"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings">
+
+        <action
+            android:id="@+id/action_settings_to_about_us"
+            app:destination="@id/fragNavAboutUs"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragNavAboutUs"
+        android:name="app.sosapp.sos.sosapp.uiModules.aboutUs.FragmentAboutUs"
+        android:label="@string/title_about_us"
+        tools:layout="@layout/fragment_about_us"/>
+
+</navigation>

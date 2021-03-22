@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_graph_home"
+            android:icon="@drawable/ic_home"
+            android:checked="true"
+            android:title="@string/title_home" />
+
+        <item
+            android:id="@+id/nav_graph_sos_contacts"
+            android:icon="@drawable/ic_contacts"
+            android:title="@string/title_sos_contacts" />
+
+        <item
+            android:checkable="false"
+            android:enabled="false"
+            android:title="@string/str_empty"
+            android:id="@+id/nav_sos_button" />
+
+
+        <item
+            android:id="@+id/nav_graph_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/title_settings" />
+
+        <item
+            android:id="@+id/nav_graph_more_apps"
+            android:icon="@drawable/ic_play_store"
+            android:title="@string/title_more_apps" />
+    </group>
+</menu>

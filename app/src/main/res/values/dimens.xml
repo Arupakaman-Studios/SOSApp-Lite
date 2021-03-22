@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_zero">0dp</dimen>
+    <dimen name="text_size_h1">18sp</dimen>
+    <dimen name="text_size_h2">16sp</dimen>
+    <dimen name="text_size_h3">14sp</dimen>
+    <dimen name="text_size_h4">12sp</dimen>
+    <dimen name="text_size_h5">10sp</dimen>
+    <dimen name="text_size_h6">8sp</dimen>
+
+    <dimen name="defaultScreenPadding">16dp</dimen>
+    <dimen name="itemHeightHomeOptions">150dp</dimen>
+    <dimen name="itemHeightSOSTools">100dp</dimen>
+    <dimen name="itemHeightContact">80dp</dimen>
+    <dimen name="dialogPopupCornerRadius">10dp</dimen>
+    <dimen name="buttonHeightSmall">50dp</dimen>
+    <dimen name="buttonTextSizeSmall">14sp</dimen>
+
+</resources>

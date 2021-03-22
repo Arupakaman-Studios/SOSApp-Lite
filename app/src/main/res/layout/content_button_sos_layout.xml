@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardSOS"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/colorTransparent"
+        style="@style/Theme.SOSApp.ClickableBorderLess"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/title_sos"
+            android:textStyle="bold"
+            android:background="@drawable/bg_sos_circle_gradient"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"/>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

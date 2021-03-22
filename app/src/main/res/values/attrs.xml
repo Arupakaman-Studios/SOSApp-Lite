@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="colorThemeBackground" format="reference"/>
+    <attr name="colorTextDark" format="reference"/>
+    <attr name="colorTextMain" format="reference"/>
+    <attr name="colorTextPrimary" format="reference"/>
+    <attr name="colorIconNormal" format="reference"/>
+    <attr name="colorIconActive" format="reference"/>
+    <attr name="colorButtonTint" format="reference"/>
+
+</resources>

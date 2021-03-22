@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?colorControlHighlight">
+    <item android:width="18dp" android:height="18dp">
+        <selector>
+            <item
+                android:drawable="@drawable/ic_check_filled"
+                android:state_checked="true"
+                android:state_enabled="true"
+                />
+
+            <item
+                android:drawable="@drawable/ic_check_filled_disabled"
+                android:state_enabled="false" />
+
+            <item
+                android:state_checked="false"
+                android:drawable="@drawable/ic_unchecked" />
+
+        </selector>
+    </item>
+</ripple>

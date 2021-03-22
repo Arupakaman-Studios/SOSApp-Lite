@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.sosapp.sos.sosapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:maxSdkVersion="29" />
+
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" /> <!-- Required to access external Intents from API 11, see : https://stackoverflow.com/a/62345806 -->
+    <queries>
+
+        <!-- Browser -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <!--
+             <category android:name="android.intent.category.BROWSABLE" />
+             <data android:scheme="https" />
+            -->
+        </intent>
+    </queries>
+
+    <application
+        android:name=".SOSApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${appLabel}"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SOSApp"
+        tools:replace="android:label">
+
+        <activity android:name=".uiModules.sendSOS.ActivitySendSOS"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            />
+
+        <activity
+            android:name=".uiModules.home.ActivityHome"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.ServiceScreenOnOff"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".services.ServiceSirenPlayer"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false" />
+        <service
+            android:name=".services.ServiceSOSFlash"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false" />
+
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/notification_channel_name" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notif_icon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+
+        <receiver android:name=".uiModules.other.SOSWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sos_home" />
+        </receiver>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/defaultScreenPadding">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSOSMsgTitle"
+                android:text="@string/title_sos_msg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="?colorTextMain"
+                android:textSize="@dimen/text_size_h3"
+                android:textStyle="bold"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSOSMsgEdit"
+                android:text="@string/action_edit"
+                style="@style/Theme.SOSApp.ClickableBorderLess"
+                app:layout_constraintTop_toTopOf="@id/tvSOSMsgTitle"
+                app:layout_constraintBottom_toBottomOf="@id/tvSOSMsgTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="?colorTextMain"
+                android:textSize="@dimen/text_size_h4"
+                bind_isUnderlined="@{true}"
+                android:textStyle="bold"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/iplSOSMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:hint="@string/hint_your_sos_msg"
+                style="@style/Theme.SOSApp.TextInputLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSOSMsgTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSOSMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.SOSApp.TextInputEditTextRegular"
+                    android:text="@string/msg_default_sos_msg"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:ellipsize="end"
+                    android:lines="5"
+                    android:maxLength="160"
+                    android:gravity="start|top"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:id="@+id/tvEmgNumTitle"
+                android:text="@string/title_emergency_numbers"
+                app:layout_constraintTop_toBottomOf="@id/iplSOSMsg"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="?colorTextMain"
+                android:textSize="@dimen/text_size_h3"
+                android:textStyle="bold"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvEmgNumEdit"
+                android:text="@string/action_edit"
+                style="@style/Theme.SOSApp.ClickableBorderLess"
+                app:layout_constraintTop_toTopOf="@id/tvEmgNumTitle"
+                app:layout_constraintBottom_toBottomOf="@id/tvEmgNumTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="?colorTextMain"
+                android:textSize="@dimen/text_size_h4"
+                bind_isUnderlined="@{true}"
+                android:textStyle="bold"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEmgNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/tvEmgNumTitle"
+                android:layout_marginVertical="10dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                android:nestedScrollingEnabled="false"
+                app:spanCount="2"
+                android:clipToPadding="false"
+                tools:listitem="@layout/item_home_options_layout"
+                tools:itemCount="4"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvEmgNumError"
+                tools:visibility="gone"
+                android:visibility="gone"
+                android:text="@string/err_msg_no_emergency_numbers"
+                app:layout_constraintTop_toBottomOf="@id/tvEmgNumTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
+                android:layout_marginVertical="20dp"
+                android:textColor="?colorTextMain"
+                android:textSize="@dimen/text_size_h4"
+                />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierEmgNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tvEmgNumError,rvEmgNum" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvSOSToolsTitle"
+                android:layout_marginTop="35dp"
+                android:text="@string/title_sos_tools"
+                app:layout_constraintTop_toBottomOf="@id/barrierEmgNum"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="?colorTextMain"
+                android:textSize="@dimen/text_size_h3"
+                android:textStyle="bold"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSOSTools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvSOSToolsTitle"
+                android:layout_marginVertical="10dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                android:nestedScrollingEnabled="false"
+                app:spanCount="3"
+                android:clipToPadding="false"
+                tools:listitem="@layout/item_sos_tools_layout"
+                tools:itemCount="3"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

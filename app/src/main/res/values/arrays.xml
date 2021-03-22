@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="arr_languages">
+        <item name="english">@string/english</item>
+        <item name="japanese">@string/japanese</item>
+        <item name="korean">@string/korean</item>
+        <item name="hindi">@string/hindi</item>
+        <item name="russian">@string/russian</item>
+        <item name="spanish">@string/spanish</item>
+        <item name="french">@string/french</item>
+        <item name="chinese">@string/chinese</item>
+        <item name="polish">@string/polish</item>
+    </string-array>
+
+    <string-array name="arr_languages_codes">
+        <item name="english">@string/english_code</item>
+        <item name="japanese">@string/japanese_code</item>
+        <item name="korean">@string/korean_code</item>
+        <item name="hindi">@string/hindi_code</item>
+        <item name="russian">@string/russian_code</item>
+        <item name="spanish">@string/spanish_code</item>
+        <item name="french">@string/french_code</item>
+        <item name="chinese">@string/chinese_code</item>
+        <item name="polish">@string/polish_code</item>
+    </string-array>
+
+    <string-array name="arr_sos_countdowns">
+        <item name="countdown_0">@string/countdown_0</item>
+        <item name="countdown_3">@string/countdown_3</item>
+        <item name="countdown_5">@string/countdown_5</item>
+        <item name="countdown_10">@string/countdown_10</item>
+    </string-array>
+
+</resources>
