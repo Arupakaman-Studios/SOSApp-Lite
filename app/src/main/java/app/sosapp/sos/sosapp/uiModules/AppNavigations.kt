@@ -60,18 +60,22 @@ fun Context.goToAppSettings() {
 
 fun Context.openCallIntent(number: String) {
     kotlin.runCatching {
-        setFirebaseAnalyticsLogEvent("GO_TO_NAV", bundleOf("Nav" to "Call_Screen"))
         @Suppress("DEPRECATION")
         val isEmg = PhoneNumberUtils.isEmergencyNumber(number)
-
-        val callIntent = Intent(if (!isEmg && ActivityHome.hasCallPermission(this)) Intent.ACTION_CALL else Intent.ACTION_DIAL)
-        callIntent.data = Uri.parse("tel:$number")
+        setFirebaseAnalyticsLogEvent("GO_TO_NAV", bundleOf("Nav" to "Call_Screen", "isEmgNum" to isEmg))
+        Log.d("openCallIntent", "isEmg $isEmg $number")
+        val callIntent = Intent.createChooser(
+            Intent((if (!isEmg && ActivityHome.hasCallPermission(this)) Intent.ACTION_CALL else Intent.ACTION_DIAL)).apply {
+                data = Uri.parse("tel:$number")
+            },
+            SOSAppRes.getString(R.string.call_via))
         if (callIntent.resolveActivity(packageManager) != null) {
             startActivity(callIntent)
         }else{
             toast(SOSAppRes.getString(R.string.err_msg_general))
         }
     }.onFailure {
+        Log.e("openCallIntent", "Exc : ", it)
         it.reportException("GO_TO_NAV Call_Screen")
         toast(SOSAppRes.getString(R.string.err_msg_general))
     }

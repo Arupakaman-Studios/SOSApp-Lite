@@ -10,6 +10,7 @@ import android.content.pm.PackageManager
 import android.os.Handler
 import android.os.Looper
 import android.telephony.SmsManager
+import android.telephony.TelephonyManager
 import android.util.Log
 import androidx.core.os.bundleOf
 import app.sosapp.sos.sosapp.utils.FirebaseReporterUtil
@@ -42,7 +43,7 @@ class BroadcastReceiverSMSSender: BroadcastReceiver() {
             mContext.registerReceiver(smsUtils, IntentFilter(SENT_SMS_ACTION_NAME))
             mContext.registerReceiver(smsUtils, IntentFilter(DELIVERED_SMS_ACTION_NAME))
 
-            val sms = SmsManager.getDefault()
+            val sms = SmsManager.getDefault() //mContext.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
             val parts = sms.divideMessage(message)
 
             val sendList: ArrayList<PendingIntent> = ArrayList()

@@ -56,7 +56,7 @@ class CenteredTitleToolbar : MaterialToolbar {
         requestLayout()
     }
 
-    fun setTitleCentered(centered: Boolean) {
+    override fun setTitleCentered(centered: Boolean) {
         centerTitle = centered
         requestLayout()
     }

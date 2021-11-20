@@ -173,7 +173,7 @@ class ActivityHome : BaseAppCompatActivity() {
         // Whenever the selected controller changes, setup the action bar.
         controller.observe(this@ActivityHome, { navController ->
             setupActionBarWithNavController(navController)
-            navController.addOnDestinationChangedListener { _, destination, _ ->
+            navController.addOnDestinationChangedListener { _, _, _ ->
 
             }
             if (navController.graph.id == R.id.nav_graph_more_apps){

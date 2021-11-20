@@ -52,7 +52,7 @@ class FragmentContactsPicker : BaseFragment<FragmentContactsPickerBinding>(){
 
             bSelected = ""
 
-            mAdapterContacts = AdapterContacts(args.maxSelection, onClick = { model, i ->
+            mAdapterContacts = AdapterContacts(args.maxSelection, onClick = { _, _ ->
                 val selected = mAdapterContacts.getSelectedContacts().size
                 if (selected <= 0) btnSelect.disable() else btnSelect.enable()
                 bSelected = "${selected}/${args.maxSelection}"
@@ -99,7 +99,7 @@ class FragmentContactsPicker : BaseFragment<FragmentContactsPickerBinding>(){
                         }
                     })
                 mDialogs.mDialog?.setOnKeyListener { dialogInterface, i, keyEvent ->
-                    if (i == KeyEvent.KEYCODE_BACK) {
+                    if (i == KeyEvent.KEYCODE_BACK && keyEvent.action == KeyEvent.ACTION_UP) {
                         dialogInterface.dismiss()
                         navController.popBackStack()
                     }

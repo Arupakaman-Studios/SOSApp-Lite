@@ -192,7 +192,7 @@
     <string name="cont_desc_select_contact">Click to select from contacts.</string>
     <string name="cont_desc_select_deselect_contact">Tap to select or deselect contact</string>
     <string name="cont_desc_app_logo">SOSApp logo</string>
-
+    <string name="call_via">Call via</string>
 
 
 </resources>

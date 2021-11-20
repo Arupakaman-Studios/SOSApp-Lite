@@ -11,7 +11,7 @@
         android:theme="@style/Theme.SOSApp.AppBarLayout"
         >
 
-        <app.sosapp.sos.sosapp.uiModules.other.CenteredTitleToolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
@@ -24,6 +24,7 @@
             app:titleMarginStart="@dimen/dp_zero"
             app:titleTextColor="?colorTextMain"
             app:navigationIconTint="?colorTextMain"
+            app:titleCentered="true"
             />
 
     </com.google.android.material.appbar.AppBarLayout>

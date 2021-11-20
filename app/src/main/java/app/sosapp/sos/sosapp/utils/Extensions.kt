@@ -145,6 +145,7 @@ fun Context.getDisplaySize(): Pair<Int, Int> {
     (getSystemService(Context.WINDOW_SERVICE) as WindowManager?)?.let { windowManager ->
         pair = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             val screenSize = Point()
+            @Suppress("DEPRECATION")
             display?.getRealSize(screenSize)
             Pair(screenSize.x, screenSize.y)
         } else {

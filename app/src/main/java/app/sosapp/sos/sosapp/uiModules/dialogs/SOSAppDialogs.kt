@@ -149,7 +149,7 @@ class SOSAppDialogs(private val mActivity: Activity) {
                 .setSingleChoiceItems(R.array.arr_languages, LocaleHelper.getSelectedLanguageCodePosition(mActivity)){ _, which ->
                     selLangPos = which
                 }
-                .setPositiveButton(R.string.action_select){ dialog, _ ->
+                .setPositiveButton(R.string.action_select){ _, _ ->
                     val selLang = LocaleHelper.getLanguageByPosition(mActivity, selLangPos)
                     LocaleHelper.setLocale(mActivity, selLang.first, selLang.second)
                     mActivity.setFirebaseAnalyticsLogEvent("LANGUAGE_SELECT", bundleOf("Language_Code" to selLang.first,
@@ -157,7 +157,7 @@ class SOSAppDialogs(private val mActivity: Activity) {
                     onSelect(selLangPos)
                     dismiss()
                 }
-                .setNegativeButton(R.string.action_cancel){ dialog, _ ->
+                .setNegativeButton(R.string.action_cancel){ _, _ ->
                     dismiss()
                 }.create()
 
@@ -171,13 +171,13 @@ class SOSAppDialogs(private val mActivity: Activity) {
                 .setSingleChoiceItems(R.array.arr_sos_countdowns, selCountDownPos){ _, which ->
                     selCountDownPos = which
                 }
-                .setPositiveButton(R.string.action_select){ dialog, _ ->
+                .setPositiveButton(R.string.action_select){ _, _ ->
                     onSelect(selCountDownPos)
                     mActivity.setFirebaseAnalyticsLogEvent("SOS_COUNT_DOWN_SELECT",
                             bundleOf("CountDown" to mActivity.resources.getStringArray(R.array.arr_sos_countdowns)[selCountDownPos]))
                     dismiss()
                 }
-                .setNegativeButton(R.string.action_cancel){ dialog, _ ->
+                .setNegativeButton(R.string.action_cancel){ _, _ ->
                     dismiss()
                 }.create()
 
