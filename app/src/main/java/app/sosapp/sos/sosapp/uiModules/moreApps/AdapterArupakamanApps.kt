@@ -24,7 +24,7 @@ class AdapterArupakamanApps(private val onClick: (ModelArupakamanApp) -> Unit)
         init {
             mDataBinding{
                 itemRootView.setSafeOnClickListener {
-                    getItem(adapterPosition)?.let(onClick)
+                    getItem(bindingAdapterPosition)?.let(onClick)
                 }
             }
         }

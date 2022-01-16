@@ -57,16 +57,16 @@ class AdapterContacts(
             mDataBinding{
 
                 ivDeleteBtn.setSafeOnClickListener {
-                    getItem(adapterPosition)?.let(onDeleteClick)
+                    getItem(bindingAdapterPosition)?.let(onDeleteClick)
                 }
 
                 itemRootView.setSafeOnClickListener {
                     kotlin.runCatching {
-                        getItem(adapterPosition)?.apply {
+                        getItem(bindingAdapterPosition)?.apply {
                             if (!isPickContacts || (getSelectedContacts().size < maxSelect || isSOSContact)){
                                 isSOSContact = !isSOSContact
-                                onClick(this, adapterPosition)
-                                notifyItemChanged(adapterPosition)
+                                onClick(this, bindingAdapterPosition)
+                                notifyItemChanged(bindingAdapterPosition)
                             }else{
                                 itemRootView.context?.applicationContext?.toast(
                                     SOSAppRes.getString(

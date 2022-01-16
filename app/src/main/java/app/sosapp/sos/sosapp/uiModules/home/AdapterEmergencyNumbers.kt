@@ -24,7 +24,7 @@ class AdapterEmergencyNumbers(private val onClick: (ModelEmergencyNumber) -> Uni
         init {
             mDataBinding{
                 itemRootView.setSafeOnClickListener {
-                    getItem(adapterPosition)?.let(onClick)
+                    getItem(bindingAdapterPosition)?.let(onClick)
                 }
             }
         }

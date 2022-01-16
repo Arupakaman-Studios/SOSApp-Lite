@@ -30,8 +30,8 @@ class AdapterSOSTools(private val onClick: (Int) -> Unit)
         init {
             mDataBinding{
                 itemRootView.setSafeOnClickListener {
-                    getItem(adapterPosition)?.let{
-                        onClick(adapterPosition)
+                    getItem(bindingAdapterPosition)?.let{
+                        onClick(bindingAdapterPosition)
                     }
                 }
             }
